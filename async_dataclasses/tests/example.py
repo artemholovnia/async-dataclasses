@@ -1,12 +1,3 @@
-# async-dataclasses
-
-## TODO
-- pre-commit
-- автоматичне формування .md файлу з прикладом використання
-- "TODO" по бібліотеці
-
-## Приклад використання
-```python 
 import asyncio
 import random
 import time
@@ -83,5 +74,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-```
+
 
