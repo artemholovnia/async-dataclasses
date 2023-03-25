@@ -1,0 +1,6 @@
+class DataclassWithAsyncFeature(type):
+
+    async def complete(self, timeout: int | None = None) -> "DataclassWithAsyncFeature": ...
+
+
+def dataclass(*args, **kwargs) -> DataclassWithAsyncFeature: ...
