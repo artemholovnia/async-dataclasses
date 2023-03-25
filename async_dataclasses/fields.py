@@ -1,10 +1,7 @@
 import dataclasses
-from typing import Generic, TypeVar
-
-T = TypeVar("T")
 
 
-class Field(dataclasses.Field, Generic[T]):
+class Field(dataclasses.Field):
     """
         TODO: docstring
         TODO: можливість додавати синхронні методи в якості обробників
@@ -23,7 +20,7 @@ class Field(dataclasses.Field, Generic[T]):
         self.resolvers.append(aw)
 
 
-def field(*args, **kwargs) -> Field:
+def field(*args, **kwargs):
     original_field_cls = dataclasses.Field
     try:
         dataclasses.Field = Field

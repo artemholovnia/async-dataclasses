@@ -19,7 +19,7 @@ def dataclass(*args, **kwargs):
             return await aw(*args, **kwargs), field_name
         return wrapped
 
-    async def complete(self, timeout: int | None = None):
+    async def complete(self, timeout):
         tasks = []
         for field_name, field in self.__dataclass_fields__.items():
             if isinstance(field, async_dataclasses.Field) and field.resolvers:
